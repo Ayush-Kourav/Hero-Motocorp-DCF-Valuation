@@ -1,24 +1,64 @@
 # Hero MotoCorp — Integrated DCF Valuation Model
 
-An integrated financial modelling and discounted cash flow (DCF) valuation project for Hero MotoCorp.
+An integrated financial modelling and discounted cash flow (DCF) valuation project for **Hero MotoCorp**, built around a three-statement financial model, FCFF valuation framework, WACC calculation and DCF sensitivity analysis.
+
+---
 
 ## Project Overview
 
-This model links historical financial statements with operating assumptions and a five-year forecast to estimate Hero MotoCorp's intrinsic equity value using a FCFF-based DCF approach.
+This project develops an integrated financial model for Hero MotoCorp by linking historical financial statements with operating assumptions and a five-year forecast period.
 
-The workbook includes:
+The model estimates intrinsic equity value using a **Free Cash Flow to Firm (FCFF) based Discounted Cash Flow (DCF)** methodology.
+
+### Key Components
 
 - Historical and forecast revenue modelling
 - Operating EBIT and profitability forecasting
-- P&L, Balance Sheet and Cash Flow Statement schedules
-- Working-capital and capex/depreciation schedules
+- Integrated P&L, Balance Sheet and Cash Flow Statement
+- Working-capital modelling
+- Capex and depreciation schedules
 - Free Cash Flow to Firm (FCFF)
 - WACC calculation
 - Enterprise-to-equity value bridge
 - DCF sensitivity analysis
 - Integrated model checks
+- Valuation visualizations
 
-## Base-Case Valuation
+---
+
+# Model & Reports
+
+## Excel Financial Model
+
+The complete integrated financial model is available here:
+
+**[Open the Hero MotoCorp DCF Model](MODEL/Hero_MotoCorp_DCF_Model.xlsx)**
+
+The workbook contains the complete financial model, including:
+
+- Executive Summary
+- Revenue Model
+- Assumptions
+- Supporting Schedules
+- P&L
+- Balance Sheet
+- Cash Flow Statement
+- FCFF
+- WACC
+- Model Checks
+- DCF Sensitivity
+
+---
+
+## Detailed Analysis Report
+
+A PDF version of the analysis and valuation is available here:
+
+**[View Hero MotoCorp DCF Analysis Report](DOCS/Hero_MotoCorp_DCF_Analysis_Report.pdf)**
+
+---
+
+# Base-Case Valuation
 
 | Metric | Base Case |
 |---|---:|
@@ -33,11 +73,11 @@ The workbook includes:
 
 > The valuation figures above are outputs of the model's stated assumptions. They are not a recommendation to buy or sell the security.
 
-## Forecast Horizon
+---
 
-The explicit forecast period runs from FY26E to FY30E.
+# Forecast Horizon
 
-Key forecast outputs:
+The explicit forecast period runs from **FY26E to FY30E**.
 
 | ₹ Cr | FY26E | FY27E | FY28E | FY29E | FY30E |
 |---|---:|---:|---:|---:|---:|
@@ -48,25 +88,37 @@ Key forecast outputs:
 | Capex | 1,072 | 1,118 | 1,212 | 1,320 | 1,422 |
 | Closing Cash | 5,896 | 12,371 | 20,307 | 30,203 | 42,477 |
 
-## DCF Methodology
+---
 
-The model values the operating business using FCFF:
+# DCF Methodology
+
+The model values the operating business using Free Cash Flow to Firm:
 
 **FCFF = EBIT × (1 − Tax Rate) + D&A − Capex − Change in NWC**
 
-The resulting forecast FCFF is discounted using WACC.
+Forecast FCFF is discounted using WACC.
 
-Terminal value is calculated using the Gordon Growth approach:
+### Terminal Value
+
+The Gordon Growth approach is used:
 
 **Terminal Value = FCFFₙ₊₁ / (WACC − Terminal Growth)**
 
-Enterprise value is then converted into equity value through the model's cash, debt and other balance-sheet adjustments, followed by division by the stated share count.
+The resulting enterprise value is converted into equity value through the model's cash, debt and other balance-sheet adjustments.
 
-## WACC
+The implied equity value is then divided by the stated share count to calculate the intrinsic value per share.
 
-The base-case WACC is **10.23%**.
+### Detailed Methodology
 
-The model includes assumptions for:
+**[Read Model Methodology](DOCS/MODEL_METHODOLOGY.md)**
+
+---
+
+# WACC
+
+The base-case WACC used in the model is **10.23%**.
+
+The WACC calculation incorporates:
 
 - Risk-free rate
 - Beta
@@ -76,36 +128,26 @@ The model includes assumptions for:
 - Tax rate
 - Capital structure
 
-The WACC sheet contains the calculation.
+The complete calculation is available in the WACC section of the Excel model.
 
-## Sensitivity Analysis
+---
 
-The model tests intrinsic value per share across different combinations of:
+# Sensitivity Analysis
 
-- WACC: 9.0%–12.0%
-- Terminal growth: 3.0%–6.0%
+The DCF model evaluates intrinsic value across different combinations of:
 
-The sensitivity table demonstrates how strongly DCF valuation depends on discount-rate and terminal-growth assumptions.
+- **WACC: 9.0%–12.0%**
+- **Terminal Growth: 3.0%–6.0%**
 
-## Workbook Structure
+The sensitivity analysis demonstrates how DCF valuation changes under different discount-rate and terminal-growth assumptions.
 
-| Sheet | Purpose |
-|---|---|
-| Executive Summary | Key valuation outputs and model overview |
-| Revenue Model | Historical and forecast operating/revenue drivers |
-| Assumptions | Core modelling assumptions |
-| Schedules | Supporting operating and financial schedules |
-| P&L | Historical and forecast income statement |
-| Balance Sheet | Historical and forecast balance sheet |
-| CFS | Cash flow statement |
-| FCFF | FCFF calculation and DCF inputs |
-| WACC | Weighted average cost of capital |
-| Model Checks | Reconciliation and integrity checks |
-| DCF Sensitivity | WACC / terminal-growth sensitivity |
+**[View DCF Sensitivity Chart](images/04_dcf_sensitivity.png)**
 
-## Model Quality Checks
+---
 
-The final workbook was recalculated and checked for:
+# Model Quality Checks
+
+The final workbook was checked for:
 
 - Broken Excel references
 - Formula errors
@@ -119,11 +161,19 @@ The final workbook was recalculated and checked for:
 
 No formula-error cells were identified in the final checked workbook.
 
-## Important Limitations
+### Detailed Model Checks
 
-This is an academic/portfolio financial modelling project, not an investment recommendation.
+**[View Model Checks](DOCS/MODEL_CHECKS.md)**
 
-The model contains historical source-data discrepancies that are disclosed in the workbook rather than silently overwritten. In particular:
+---
+
+# Important Assumptions & Limitations
+
+This is an **academic and portfolio financial modelling project**, not an investment recommendation.
+
+The model contains historical source-data discrepancies that are disclosed rather than silently overwritten.
+
+In particular:
 
 - Historical Balance Sheet discrepancies exist for FY24 and FY25.
 - Historical D&A differs from the supporting schedule for FY22 and FY23.
@@ -131,46 +181,84 @@ The model contains historical source-data discrepancies that are disclosed in th
 
 Market-sensitive assumptions such as the risk-free rate, beta, equity risk premium and reference price should be independently refreshed before using the model for a live investment decision.
 
-## Repository Contents
+### Detailed Assumptions & Limitations
 
-```text
-Hero-MotoCorp-DCF/
-│
-├── Hero_MotoCorp_DCF_Model.xlsx
-├── README.md
-├── MODEL_METHODOLOGY.md
-├── ASSUMPTIONS_AND_LIMITATIONS.md
-├── MODEL_CHECKS.md
-├── VALUATION_SNAPSHOT.md
-├── .gitignore
-└── LICENSE
-```
+**[Read Assumptions & Limitations](DOCS/ASSUMPTIONS_AND_LIMITATIONS.md)**
 
-## Disclaimer
+---
 
-This project is for educational and portfolio purposes only. It demonstrates financial modelling, valuation and sensitivity-analysis techniques. It should not be interpreted as investment advice or a recommendation regarding Hero MotoCorp or any other security.
+# Visual Outputs
 
+## FCFF Forecast
 
-## Visual Outputs
-
-### Valuation Snapshot
-![DCF Valuation Snapshot](images/00_valuation_snapshot.png)
-
-### Revenue Trend
-![Revenue Trend](images/02_revenue_trend.png)
-
-### Operating EBIT Margin
-![Operating EBIT Margin](images/03_ebit_margin.png)
-
-### FCFF Forecast
 ![FCFF Forecast](images/01_fcff_forecast.png)
 
-### DCF Sensitivity
+**[Open FCFF Forecast](images/01_fcff_forecast.png)**
+
+---
+
+## Revenue Trend
+
+![Revenue Trend](images/02_revenue_trend.png)
+
+**[Open Revenue Trend](images/02_revenue_trend.png)**
+
+---
+
+## Operating EBIT Margin
+
+![Operating EBIT Margin](images/03_ebit_margin.png)
+
+**[Open EBIT Margin Chart](images/03_ebit_margin.png)**
+
+---
+
+## DCF Sensitivity
+
 ![DCF Sensitivity](images/04_dcf_sensitivity.png)
 
-### Vehicle Volume
+**[Open DCF Sensitivity](images/04_dcf_sensitivity.png)**
+
+---
+
+## Vehicle Volume
+
 ![Vehicle Volume](images/05_vehicle_volume.png)
 
-## Report
+**[Open Vehicle Volume Chart](images/05_vehicle_volume.png)**
 
-A PDF version of the analysis is included as `Hero_MotoCorp_DCF_Analysis_Report.pdf`.
+---
+
+# Valuation Snapshot
+
+The detailed valuation snapshot is available in the documentation folder:
+
+**[View Valuation Snapshot](DOCS/VALUATION_SNAPSHOT.md)**
+
+---
+
+# Repository Structure
+
+```text
+Hero-Motocorp-DCF-Valuation/
+│
+├── DOCS/
+│   ├── Hero_MotoCorp_DCF_Analysis_Report.pdf
+│   ├── ASSUMPTIONS_AND_LIMITATIONS.md
+│   ├── MODEL_CHECKS.md
+│   ├── MODEL_METHODOLOGY.md
+│   └── VALUATION_SNAPSHOT.md
+│
+├── MODEL/
+│   └── Hero_MotoCorp_DCF_Model.xlsx
+│
+├── images/
+│   ├── 01_fcff_forecast.png
+│   ├── 02_revenue_trend.png
+│   ├── 03_ebit_margin.png
+│   ├── 04_dcf_sensitivity.png
+│   └── 05_vehicle_volume.png
+│
+├── .gitignore
+├── LICENSE
+└── README.md
